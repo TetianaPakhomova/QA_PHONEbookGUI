@@ -1,10 +1,10 @@
-package com.yourprojectname.fw;
+package com.demowebshop.fw;
 
-import com.yourprojectname.core.BaseHelper;
-import com.yourprojectname.models.User;
+import com.demowebshop.core.BaseHelper;
+import com.demowebshop.models.User;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.By;
 
 public class UserHelper extends BaseHelper {
 
@@ -13,7 +13,8 @@ public class UserHelper extends BaseHelper {
     }
 
     public void registerUser(User user) {
-        click(By.linkText("Register"));
+        click(By.cssSelector("a.ico-register"));
+        //click(By.id("gender-male"));
         type(By.id("FirstName"), user.getFirstName());
         type(By.id("LastName"), user.getLastName());
         type(By.id("Email"), user.getEmail());
@@ -23,13 +24,22 @@ public class UserHelper extends BaseHelper {
     }
 
     public void login(String email, String password) {
-        click(By.linkText("Log in"));
+        click(By.cssSelector("a.ico-login"));
         type(By.id("Email"), email);
         type(By.id("Password"), password);
         click(By.cssSelector("input.button-1.login-button"));
     }
 
     public boolean isLoggedIn() {
-        return isElementPresent(By.linkText("Log out"));
+        return isElementPresent(By.cssSelector("a.ico-logout"));
+    }
+
+    public void logout() {
+        if (isLoggedIn()) click(By.cssSelector("a.ico-logout"));
+    }
+
+    public String getLoginErrorMessage() {
+        return "";
     }
 }
+

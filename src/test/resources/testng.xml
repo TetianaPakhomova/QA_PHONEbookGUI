@@ -1,0 +1,20 @@
+<suite name="DemoWebShopSuite" verbose="1">
+    <test name="AccountTests">
+        <classes>
+            <class name="com.demowebshop.test.tests.ItemTests">
+            <class name="com.demowebshop.test.tests.CreateAccountTest"/>
+        </classes>
+    </test>
+
+    <test name="ItemTests">
+        <classes>
+            <class name="com.demowebshop.test.tests.ItemTests"/>
+        </classes>
+    </test>
+
+    <test name="PositiveLoginTests">
+        <classes>
+            <class name="com.demowebshop.test.tests.PositiveLoginTest"/>
+        </classes>
+    </test>
+</suite>

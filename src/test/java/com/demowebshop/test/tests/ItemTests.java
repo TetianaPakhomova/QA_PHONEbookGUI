@@ -1,6 +1,7 @@
-package com.demowebshop.test;
+package com.demowebshop.test.tests;
 
-import com.yourprojectname.models.User;
+import com.demowebshop.models.User;
+import com.demowebshop.test.core.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -13,10 +14,8 @@ public class ItemTests extends TestBase {
     @BeforeMethod
     public void registerAndLoginUser(){
         userEmail = "ss" + System.currentTimeMillis() + "@gmail.com";
-        User user = new User("SS", "SS", userEmail, password);
+        User user = new User("SS","SS",userEmail,password);
         app.user().registerUser(user);
-
-        app.user().login(userEmail, password);
         Assert.assertTrue(app.user().isLoggedIn());
     }
 
@@ -24,7 +23,6 @@ public class ItemTests extends TestBase {
     public void addItemToCartTest(){
         app.item().addFirstItemToCart();
         String itemName = app.item().getAddedItemName();
-
         Assert.assertTrue(itemName.length() > 0);
     }
 }
