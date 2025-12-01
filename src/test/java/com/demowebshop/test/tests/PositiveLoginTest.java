@@ -1,5 +1,6 @@
 package com.demowebshop.test.tests;
 
+import com.demowebshop.core.ApplicationManager;
 import com.demowebshop.models.User;
 import com.demowebshop.test.core.TestBase;
 import org.testng.Assert;
@@ -15,7 +16,8 @@ public class PositiveLoginTest extends TestBase {
         String userEmail = "test" + System.currentTimeMillis() + "@gmail.com";
         User user = new User("SS","SS", userEmail,password);
 
-        app.user().registerUser(user);
+        TestBase app = null;
+        app.user().registerUser();
         Assert.assertTrue(app.user().isLoggedIn());
 
         app.user().logout();
@@ -25,6 +27,7 @@ public class PositiveLoginTest extends TestBase {
 
     @Test
     public void loginAddItemToCart(){
+        ApplicationManager app = null;
         app.item().addFirstItemToCart();
         String itemName = app.item().getAddedItemName();
         Assert.assertTrue(itemName.length() > 0);

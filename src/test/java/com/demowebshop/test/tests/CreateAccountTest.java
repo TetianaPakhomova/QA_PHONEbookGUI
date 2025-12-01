@@ -1,5 +1,7 @@
+
 package com.demowebshop.test.tests;
 
+import com.demowebshop.fw.UserHelper;
 import com.demowebshop.models.User;
 import com.demowebshop.test.core.TestBase;
 import org.testng.Assert;
@@ -12,18 +14,22 @@ public class CreateAccountTest extends TestBase {
     private final String password = "Test12345$";
 
     @BeforeMethod
-    public void prepareUserData(){
+    public void prepareUserData() {
         userEmail = "user" + System.currentTimeMillis() + "@gmail.com";
     }
 
     @Test
-    public void createAccountSuccessfully(){
+    public void createAccountSuccessfully() {
         User user = new User("John", "Doe", userEmail, password);
-        app.user().registerUser(user);
+        user().registerUser();
 
-        Assert.assertTrue(app.user().isLoggedIn());
+        Assert.assertTrue(user().isRegistrationSuccessful());
+        Assert.assertTrue(user().isLoggedIn());
+    }
 
-       // app.user().logout();
-       // Assert.assertFalse(app.user().isLoggedIn());
+    public UserHelper user() {
+        return null;
     }
 }
+
+

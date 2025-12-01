@@ -56,4 +56,8 @@ public class ApplicationManager {
     public void takeScreenshot(String methodName) {
 
     }
+
+    public Object getUser() {
+        return null;
+    }
 }

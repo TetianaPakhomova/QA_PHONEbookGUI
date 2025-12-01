@@ -1,7 +1,8 @@
 package com.demowebshop.test.tests;
 
+import com.demowebshop.core.ApplicationManager;
 import com.demowebshop.models.User;
-import com.demowebshop.test.core.MyDataProviders;
+import com.demowebshop.utils.MyDataProviders;
 import com.demowebshop.test.core.UserData;
 import com.demowebshop.test.core.TestBase;
 import org.testng.annotations.Test;
@@ -18,8 +19,8 @@ public class RegistrationAndAddItemTest extends TestBase {
                 userData.getEmail(),
                 userData.getPassword()
         );
-        app.user().registerUser(user);
 
+        ApplicationManager app = null;
         app.item().addFirstItemToCart();
 
         String itemName = app.item().getAddedItemName();

@@ -11,11 +11,12 @@ public class NegativeLoginTest extends TestBase {
     public void loginUser(){
         String userEmail = "wronguser@gmail.com";
         String password = "WrongPass123";
-        app.user().login(userEmail, password);
+        user().login(userEmail, password);
     }
 
     @Test
     public void loginWithInvalidCredentials(){
+        TestBase app = null;
         Assert.assertFalse(app.user().isLoggedIn());
 
         String errorMessage = app.user().getLoginErrorMessage();

@@ -1,4 +1,4 @@
-package com.demowebshop.test.core;
+package com.demowebshop.utils;
 
 import org.testng.annotations.DataProvider;
 import java.io.*;
@@ -25,6 +25,9 @@ public class MyDataProviders {
         }
 
         return list.iterator();
+    }
+
+    private record UserData(String string, String string1, String string2, String string3) {
     }
 }
 
