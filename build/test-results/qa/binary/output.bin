@@ -1,0 +1,1 @@
+À19:50:28.746 [Test worker] WARN  org.testng.xml.TestNGContentHandler - It is strongly recommended to add "<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.1.dtd" >" at the top of the suite file [C:\Tools\gradle-9.1.0\QA70PhonebookGUI\src\test\resources\testng.xml] otherwise TestNG may fail or not work as expected.

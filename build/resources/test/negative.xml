@@ -1,0 +1,10 @@
+<suite name="NegativeSuite" verbose="1">
+    <test name="NegativeLoginTests">
+        <classes>
+            <class name="com.demowebshop.test.tests.NegativeLoginTest">
+                <methods>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.demowebshop.test.ItemTests" tests="2" skipped="1" failures="1" errors="0" timestamp="2025-11-28T20:45:34.408Z" hostname="DESKTOP-8U03UTF" time="30.401">
+  <properties/>
+  <testcase name="registerAndLoginUser" classname="com.demowebshop.test.ItemTests" time="30.392"></testcase>
+    <failure message="org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: a.ico-register (tried for 30 second(s) with 500 milliseconds interval)"
+             type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException:
+  Expected condition failed: waiting for element to be clickable: By.cssSelector: a.ico-register
+  (tried for 30 second(s) with 500 milliseconds interval)
+    </failure>
+        <system-out><![CDATA[22:09:13.384 [Test worker] INFO  com.phonebook.core.TestBase -- Start smoky test
+22:09:13.395 [Test worker] INFO  com.demowebshop.core.TestBase -- Start test addContactPositiveTest with data: []
+22:09:16.865 [Test worker] INFO  com.demowebshop.core.TestBase -- PASSED: addContactPositiveTest
+22:09:16.865 [Test worker] INFO  com.demowebshop.core.TestBase -- Stop Test
+22:09:16.865 [Test worker] INFO  com.demowebshop.core.TestBase -- ************************************************
+22:09:16.869 [Test worker] INFO  com.demowebshop.core.TestBase -- Stop smoky test
+]]></system-out>
+        <system-err><![CDATA[]]></system-err>
+      </testsuite>
